@@ -1,10 +1,86 @@
 # TagLinks
 
-### Lancer l'application
+### Commande Docker pour créer un conteneur MongoDB
+
+Vous pouvez exécuter la commande suivante pour lancer un conteneur MongoDB :
+
+```bash
+docker run -d --name mongodb-container \
+  -p 27017:27017 \
+  -e MONGO_INITDB_ROOT_USERNAME=admin \
+  -e MONGO_INITDB_ROOT_PASSWORD=password \
+  mongo
+```
+
+#### Explications :
+
+- `-d` : Lance le conteneur en arrière-plan (mode détaché).
+- `--name mongodb-container` : Nomme le conteneur.
+- `-p 27017:27017` : Expose le port 27017 (le port par défaut de MongoDB) du conteneur sur l'hôte.
+- `-e MONGO_INITDB_ROOT_USERNAME=admin` : Définit l'utilisateur administrateur.
+- `-e MONGO_INITDB_ROOT_PASSWORD=password` : Définit le mot de passe administrateur.
+- `mongo` : Utilise l'image officielle MongoDB.
+
+---
+
+### **Créer un environnement virtuel**
+
+```bash
+python -m venv venv
+```
+
+### **Activer l'environnement**
+
+- **Sous Linux/Mac :**
+
+  ```bash
+  source venv/bin/activate
+  ```
+
+- **Sous Windows :**
+  ```bash
+  venv\Scripts\activate
+  ```
+
+### **Installer les dépendances**
+
+```bash
+pip install -r requirements.txt
+```
+
+### **Mettre à jour le fichier `requirements.txt`**
+
+```bash
+pip freeze > requirements.txt
+```
+
+### **Lancer l'application**
 
 ```bash
 python app.py
 ```
+
+---
+
+### **Lancer l'application avec Docker**
+
+1. **Assurez-vous que Docker et Docker Compose sont installés.**
+
+2. Créez ou vérifiez le fichier `docker-compose.yml`.
+
+3. Lancez l'application avec Docker Compose :
+
+   ```bash
+   docker compose up
+   ```
+
+4. Pour lancer en arrière-plan (mode détaché) :
+
+   ```bash
+   docker compose up -d
+   ```
+
+---
 
 ### **1. Inscription d'un utilisateur (`/signup`)**
 
@@ -146,28 +222,3 @@ curl -X DELETE http://localhost:5000/tags/<TAG_ID> \
           "limit": 10
       }'
   ```
-
----
-
-### Commande Docker pour créer un conteneur MongoDB
-
-Vous pouvez exécuter la commande suivante pour lancer un conteneur MongoDB :
-
-```bash
-docker run -d --name mongodb-container \
-  -p 27017:27017 \
-  -e MONGO_INITDB_ROOT_USERNAME=admin \
-  -e MONGO_INITDB_ROOT_PASSWORD=password \
-  mongo
-```
-
-#### Explications :
-
-- `-d` : Lance le conteneur en arrière-plan (mode détaché).
-- `--name mongodb-container` : Nomme le conteneur.
-- `-p 27017:27017` : Expose le port 27017 (le port par défaut de MongoDB) du conteneur sur l'hôte.
-- `-e MONGO_INITDB_ROOT_USERNAME=admin` : Définit l'utilisateur administrateur.
-- `-e MONGO_INITDB_ROOT_PASSWORD=password` : Définit le mot de passe administrateur.
-- `mongo` : Utilise l'image officielle MongoDB.
-
----
