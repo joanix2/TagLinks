@@ -1,4 +1,9 @@
+from flask import request, jsonify
+from flask_jwt_extended import (
+    jwt_required, get_jwt_identity
+)
 from bson.objectid import ObjectId
+from src.collections import tags_collection, links_collection
 
 @app.route('/links', methods=['POST'])
 @jwt_required()

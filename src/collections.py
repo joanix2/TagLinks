@@ -1,4 +1,6 @@
 # Connexion à la base MongoDB
+from src.mongo import connect_to_mongo, get_or_create_collection
+
 client = connect_to_mongo()
 DATABASE_NAME = "db"
 # Users

@@ -1,5 +1,44 @@
 # TagLinks
 
+#### Créer un Tag
+
+```bash
+curl -X POST http://localhost:5000/tags \
+    -H "Authorization: Bearer <TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '{"name": "Important", "color": "#FF0000"}'
+```
+
+#### Lister Tous les Tags
+
+```bash
+curl -X GET http://localhost:5000/tags \
+    -H "Authorization: Bearer <TOKEN>"
+```
+
+#### Obtenir un Tag par ID
+
+```bash
+curl -X GET http://localhost:5000/tags/<TAG_ID> \
+    -H "Authorization: Bearer <TOKEN>"
+```
+
+#### Mettre à Jour un Tag
+
+```bash
+curl -X PUT http://localhost:5000/tags/<TAG_ID> \
+    -H "Authorization: Bearer <TOKEN>" \
+    -H "Content-Type: application/json" \
+    -d '{"color": "#00FF00"}'
+```
+
+#### Supprimer un Tag
+
+```bash
+curl -X DELETE http://localhost:5000/tags/<TAG_ID> \
+    -H "Authorization: Bearer <TOKEN>"
+```
+
 - **Créer un link** :
 
   ```bash

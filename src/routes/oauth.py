@@ -1,6 +1,13 @@
+from flask import request, jsonify
+from flask_jwt_extended import (
+    JWTManager, create_access_token
+)
+
 # Configuration de la clé secrète pour JWT
 app.config["JWT_SECRET_KEY"] = "votre_cle_secrete_pour_jwt"  # Changez cette clé pour quelque chose de sécurisé
 jwt = JWTManager(app)
+
+from src.collections import users_collection
 
 
 @app.route('/signup', methods=['POST'])
