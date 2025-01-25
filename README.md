@@ -1,5 +1,57 @@
 # TagLinks
 
+### Lancer l'application
+
+```bash
+python app.py
+```
+
+### **1. Inscription d'un utilisateur (`/signup`)**
+
+Requête pour créer un nouvel utilisateur.
+
+#### Commande `curl`
+
+```bash
+curl -X POST http://localhost:5000/signup \
+-H "Content-Type: application/json" \
+-d '{
+    "username": "user1",
+    "password": "password123"
+}'
+```
+
+---
+
+### **2. Connexion d'un utilisateur (`/login`)**
+
+Requête pour s'authentifier et obtenir un token JWT.
+
+#### Commande `curl`
+
+```bash
+curl -X POST http://localhost:5000/login \
+-H "Content-Type: application/json" \
+-d '{
+    "username": "user1",
+    "password": "password123"
+}'
+```
+
+---
+
+### **3. Vérifier la connexion MongoDB (`/check-mongo`)**
+
+Requête pour tester la connexion à MongoDB.
+
+#### Commande `curl`
+
+```bash
+curl -X GET http://localhost:5000/check-mongo
+```
+
+---
+
 #### Créer un Tag
 
 ```bash

@@ -1,11 +1,13 @@
-from flask import request, jsonify
+from flask import Blueprint, request, jsonify
 from flask_jwt_extended import (
     jwt_required, get_jwt_identity
 )
 from bson.objectid import ObjectId
 from src.collections import tags_collection, links_collection
 
-@app.route('/links', methods=['POST'])
+links_bp = Blueprint('links', __name__)
+
+@links_bp.route('/links', methods=['POST'])
 @jwt_required()
 def create_link():
     """
@@ -41,7 +43,7 @@ def create_link():
     return jsonify({"message": "Link créé avec succès", "link": link}), 201
 
 
-@app.route('/links', methods=['GET'])
+@links_bp.route('/links', methods=['GET'])
 @jwt_required()
 def get_all_links():
     """
@@ -59,7 +61,7 @@ def get_all_links():
     return jsonify(links), 200
 
 
-@app.route('/links/<string:link_id>', methods=['GET'])
+@links_bp.route('/links/<string:link_id>', methods=['GET'])
 @jwt_required()
 def get_link(link_id):
     """
@@ -78,7 +80,7 @@ def get_link(link_id):
     return jsonify(link), 200
 
 
-@app.route('/links/<string:link_id>', methods=['PUT'])
+@links_bp.route('/links/<string:link_id>', methods=['PUT'])
 @jwt_required()
 def update_link(link_id):
     """
@@ -123,7 +125,7 @@ def update_link(link_id):
     return jsonify({"message": "Link mis à jour avec succès", "link": updated_link}), 200
 
 
-@app.route('/links/<string:link_id>', methods=['DELETE'])
+@links_bp.route('/links/<string:link_id>', methods=['DELETE'])
 @jwt_required()
 def delete_link(link_id):
     """
@@ -139,7 +141,7 @@ def delete_link(link_id):
     return jsonify({"message": "Link supprimé avec succès"}), 200
 
 
-@app.route('/links/search-by-tags', methods=['POST'])
+@links_bp.route('/links/search-by-tags', methods=['POST'])
 @jwt_required()
 def search_links_by_tags():
     """

@@ -1,12 +1,13 @@
-from flask import request, jsonify
+from flask import Blueprint, request, jsonify
 from flask_jwt_extended import (
     jwt_required
 )
 from bson.objectid import ObjectId
-
 from src.collections import tags_collection
 
-@app.route('/tags', methods=['POST'])
+tags_bp = Blueprint('tags', __name__)
+
+@tags_bp.route('/tags', methods=['POST'])
 @jwt_required()
 def create_tag():
     """
@@ -32,7 +33,7 @@ def create_tag():
     return jsonify({"message": "Tag créé avec succès", "tag": tag}), 201
 
 
-@app.route('/tags', methods=['GET'])
+@tags_bp.route('/tags', methods=['GET'])
 @jwt_required()
 def get_all_tags():
     """
@@ -47,7 +48,7 @@ def get_all_tags():
     return jsonify(tags), 200
 
 
-@app.route('/tags/<string:tag_id>', methods=['GET'])
+@tags_bp.route('/tags/<string:tag_id>', methods=['GET'])
 @jwt_required()
 def get_tag(tag_id):
     """
@@ -68,7 +69,7 @@ def get_tag(tag_id):
     return jsonify(tag), 200
 
 
-@app.route('/tags/<string:tag_id>', methods=['PUT'])
+@tags_bp.route('/tags/<string:tag_id>', methods=['PUT'])
 @jwt_required()
 def update_tag(tag_id):
     """
@@ -105,7 +106,7 @@ def update_tag(tag_id):
     return jsonify({"message": "Tag mis à jour avec succès", "tag": updated_tag}), 200
 
 
-@app.route('/tags/<string:tag_id>', methods=['DELETE'])
+@tags_bp.route('/tags/<string:tag_id>', methods=['DELETE'])
 @jwt_required()
 def delete_tag(tag_id):
     """

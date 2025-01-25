@@ -1,16 +1,12 @@
-from flask import request, jsonify
-from flask_jwt_extended import (
-    JWTManager, create_access_token
-)
+from flask import Blueprint, request, jsonify
+from flask_jwt_extended import create_access_token
+from werkzeug.security import generate_password_hash, check_password_hash
 
-# Configuration de la clé secrète pour JWT
-app.config["JWT_SECRET_KEY"] = "votre_cle_secrete_pour_jwt"  # Changez cette clé pour quelque chose de sécurisé
-jwt = JWTManager(app)
+users_bp = Blueprint('users', __name__)
 
-from src.collections import users_collection
+from src.collections import users_collection, client
 
-
-@app.route('/signup', methods=['POST'])
+@users_bp.route('/signup', methods=['POST'])
 def signup():
     """
     Endpoint pour créer un nouvel utilisateur.
@@ -32,7 +28,7 @@ def signup():
 
     return jsonify({"message": "Utilisateur créé avec succès"}), 201
 
-@app.route('/login', methods=['POST'])
+@users_bp.route('/login', methods=['POST'])
 def login():
     """
     Endpoint pour s'authentifier et obtenir un token JWT.
@@ -54,7 +50,7 @@ def login():
     access_token = create_access_token(identity=username)
     return jsonify(access_token=access_token), 200
     
-@app.route('/check-mongo', methods=['GET'])
+@users_bp.route('/check-mongo', methods=['GET'])
 def check_mongo():
     """
     Vérifie la connexion à la base de données MongoDB.

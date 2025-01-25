@@ -1,13 +1,19 @@
-import os
-from flask import Flask, request, jsonify
-from flask_jwt_extended import (
-    JWTManager, create_access_token, jwt_required, get_jwt_identity
-)
-from werkzeug.security import generate_password_hash, check_password_hash
-
-from src.mongo import connect_to_mongo, get_or_create_collection
+from flask import Flask
+from flask_jwt_extended import JWTManager
+from src.routes.oauth import users_bp
+from src.routes.tags import tags_bp
+from src.routes.links import links_bp
 
 app = Flask(__name__)
+
+# Configuration de la clé secrète pour JWT
+app.config["JWT_SECRET_KEY"] = "votre_cle_secrete_pour_jwt"  # Changez cette clé pour quelque chose de sécurisé
+jwt = JWTManager(app)
+
+# Enregistrer le Blueprint
+app.register_blueprint(users_bp)
+app.register_blueprint(tags_bp)
+app.register_blueprint(links_bp)
 
     
 if __name__ == '__main__':
