@@ -1,0 +1,437 @@
+[
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jwt_required",
+        "importPath": "flask_jwt_extended",
+        "description": "flask_jwt_extended",
+        "isExtraImport": true,
+        "detail": "flask_jwt_extended",
+        "documentation": {}
+    },
+    {
+        "label": "get_jwt_identity",
+        "importPath": "flask_jwt_extended",
+        "description": "flask_jwt_extended",
+        "isExtraImport": true,
+        "detail": "flask_jwt_extended",
+        "documentation": {}
+    },
+    {
+        "label": "create_access_token",
+        "importPath": "flask_jwt_extended",
+        "description": "flask_jwt_extended",
+        "isExtraImport": true,
+        "detail": "flask_jwt_extended",
+        "documentation": {}
+    },
+    {
+        "label": "jwt_required",
+        "importPath": "flask_jwt_extended",
+        "description": "flask_jwt_extended",
+        "isExtraImport": true,
+        "detail": "flask_jwt_extended",
+        "documentation": {}
+    },
+    {
+        "label": "JWTManager",
+        "importPath": "flask_jwt_extended",
+        "description": "flask_jwt_extended",
+        "isExtraImport": true,
+        "detail": "flask_jwt_extended",
+        "documentation": {}
+    },
+    {
+        "label": "CONNECTION",
+        "importPath": "src.init_db",
+        "description": "src.init_db",
+        "isExtraImport": true,
+        "detail": "src.init_db",
+        "documentation": {}
+    },
+    {
+        "label": "CONNECTION",
+        "importPath": "src.init_db",
+        "description": "src.init_db",
+        "isExtraImport": true,
+        "detail": "src.init_db",
+        "documentation": {}
+    },
+    {
+        "label": "CONNECTION",
+        "importPath": "src.init_db",
+        "description": "src.init_db",
+        "isExtraImport": true,
+        "detail": "src.init_db",
+        "documentation": {}
+    },
+    {
+        "label": "generate_password_hash",
+        "importPath": "werkzeug.security",
+        "description": "werkzeug.security",
+        "isExtraImport": true,
+        "detail": "werkzeug.security",
+        "documentation": {}
+    },
+    {
+        "label": "check_password_hash",
+        "importPath": "werkzeug.security",
+        "description": "werkzeug.security",
+        "isExtraImport": true,
+        "detail": "werkzeug.security",
+        "documentation": {}
+    },
+    {
+        "label": "duckdb",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "duckdb",
+        "description": "duckdb",
+        "detail": "duckdb",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "connect_to_duckdb",
+        "importPath": "src.duckdb_connection",
+        "description": "src.duckdb_connection",
+        "isExtraImport": true,
+        "detail": "src.duckdb_connection",
+        "documentation": {}
+    },
+    {
+        "label": "users_bp",
+        "importPath": "src.routes.oauth",
+        "description": "src.routes.oauth",
+        "isExtraImport": true,
+        "detail": "src.routes.oauth",
+        "documentation": {}
+    },
+    {
+        "label": "tags_bp",
+        "importPath": "src.routes.tags",
+        "description": "src.routes.tags",
+        "isExtraImport": true,
+        "detail": "src.routes.tags",
+        "documentation": {}
+    },
+    {
+        "label": "links_bp",
+        "importPath": "src.routes.links",
+        "description": "src.routes.links",
+        "isExtraImport": true,
+        "detail": "src.routes.links",
+        "documentation": {}
+    },
+    {
+        "label": "create_link",
+        "kind": 2,
+        "importPath": "src.routes.links",
+        "description": "src.routes.links",
+        "peekOfCode": "def create_link():\n    \"\"\"\n    Endpoint pour créer un nouveau link.\n    Nécessite un token JWT valide.\n    \"\"\"\n    data = request.get_json(force=True)\n    name = data.get(\"name\")\n    description = data.get(\"description\")\n    url = data.get(\"url\")\n    user_id = get_jwt_identity()",
+        "detail": "src.routes.links",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_links",
+        "kind": 2,
+        "importPath": "src.routes.links",
+        "description": "src.routes.links",
+        "peekOfCode": "def get_all_links():\n    \"\"\"\n    Endpoint pour récupérer tous les links d'un utilisateur.\n    \"\"\"\n    user_id = get_jwt_identity()\n    links = CONNECTION.execute(\"\"\"\n        SELECT l.id, l.name, l.description, l.url,\n            (SELECT GROUP_CONCAT(t.id) FROM links_tags lt JOIN tags t ON lt.tag_id = t.id WHERE lt.link_id = l.id) AS tag_ids\n        FROM links l\n        WHERE l.user_id = ?",
+        "detail": "src.routes.links",
+        "documentation": {}
+    },
+    {
+        "label": "get_link",
+        "kind": 2,
+        "importPath": "src.routes.links",
+        "description": "src.routes.links",
+        "peekOfCode": "def get_link(link_id):\n    \"\"\"\n    Endpoint pour récupérer un link par son ID.\n    \"\"\"\n    user_id = get_jwt_identity()\n    link = CONNECTION.execute(\"\"\"\n        SELECT l.id, l.name, l.description, l.url,\n            (SELECT GROUP_CONCAT(t.id) FROM links_tags lt JOIN tags t ON lt.tag_id = t.id WHERE lt.link_id = l.id) AS tag_ids\n        FROM links l\n        WHERE l.id = ? AND l.user_id = ?",
+        "detail": "src.routes.links",
+        "documentation": {}
+    },
+    {
+        "label": "update_link",
+        "kind": 2,
+        "importPath": "src.routes.links",
+        "description": "src.routes.links",
+        "peekOfCode": "def update_link(link_id):\n    \"\"\"\n    Endpoint pour mettre à jour un link par son ID.\n    \"\"\"\n    user_id = get_jwt_identity()\n    data = request.get_json(force=True)\n    new_name = data.get(\"name\")\n    new_description = data.get(\"description\")\n    new_url = data.get(\"url\")\n    new_tag_ids = data.get(\"tag_ids\", [])",
+        "detail": "src.routes.links",
+        "documentation": {}
+    },
+    {
+        "label": "delete_link",
+        "kind": 2,
+        "importPath": "src.routes.links",
+        "description": "src.routes.links",
+        "peekOfCode": "def delete_link(link_id):\n    \"\"\"\n    Endpoint pour supprimer un link par son ID.\n    \"\"\"\n    user_id = get_jwt_identity()\n    existing_link = CONNECTION.execute(\n        \"SELECT id FROM links WHERE id = ? AND user_id = ?\", [link_id, user_id]\n    ).fetchone()\n    if not existing_link:\n        return jsonify({\"error\": \"Link non trouvé\"}), 404",
+        "detail": "src.routes.links",
+        "documentation": {}
+    },
+    {
+        "label": "links_bp",
+        "kind": 5,
+        "importPath": "src.routes.links",
+        "description": "src.routes.links",
+        "peekOfCode": "links_bp = Blueprint('links', __name__)\n@links_bp.route('/links', methods=['POST'])\n@jwt_required()\ndef create_link():\n    \"\"\"\n    Endpoint pour créer un nouveau link.\n    Nécessite un token JWT valide.\n    \"\"\"\n    data = request.get_json(force=True)\n    name = data.get(\"name\")",
+        "detail": "src.routes.links",
+        "documentation": {}
+    },
+    {
+        "label": "signup",
+        "kind": 2,
+        "importPath": "src.routes.oauth",
+        "description": "src.routes.oauth",
+        "peekOfCode": "def signup():\n    \"\"\"\n    Endpoint pour créer un nouvel utilisateur.\n    \"\"\"\n    data = request.get_json(force=True)\n    username = data.get(\"username\")\n    password = data.get(\"password\")\n    # Vérifier si l'utilisateur existe déjà\n    existing_user = CONNECTION.execute(\n        \"SELECT * FROM users WHERE username = ?\", [username]",
+        "detail": "src.routes.oauth",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "src.routes.oauth",
+        "description": "src.routes.oauth",
+        "peekOfCode": "def login():\n    \"\"\"\n    Endpoint pour s'authentifier et obtenir un token JWT.\n    \"\"\"\n    data = request.get_json(force=True)\n    username = data.get(\"username\")\n    password = data.get(\"password\")\n    # Vérifier si l'utilisateur existe\n    user = CONNECTION.execute(\n        \"SELECT * FROM users WHERE username = ?\", [username]",
+        "detail": "src.routes.oauth",
+        "documentation": {}
+    },
+    {
+        "label": "check_duckdb",
+        "kind": 2,
+        "importPath": "src.routes.oauth",
+        "description": "src.routes.oauth",
+        "peekOfCode": "def check_duckdb():\n    \"\"\"\n    Vérifie la connexion à la base de données DuckDB.\n    \"\"\"\n    try:\n        # Tester la connexion en listant les tables\n        tables = CONNECTION.execute(\"SHOW TABLES\").fetchall()\n        return jsonify({\n            \"message\": \"Connexion à DuckDB réussie.\",\n            \"tables\": [table[0] for table in tables]",
+        "detail": "src.routes.oauth",
+        "documentation": {}
+    },
+    {
+        "label": "users_bp",
+        "kind": 5,
+        "importPath": "src.routes.oauth",
+        "description": "src.routes.oauth",
+        "peekOfCode": "users_bp = Blueprint('users', __name__)\n@users_bp.route('/signup', methods=['POST'])\ndef signup():\n    \"\"\"\n    Endpoint pour créer un nouvel utilisateur.\n    \"\"\"\n    data = request.get_json(force=True)\n    username = data.get(\"username\")\n    password = data.get(\"password\")\n    # Vérifier si l'utilisateur existe déjà",
+        "detail": "src.routes.oauth",
+        "documentation": {}
+    },
+    {
+        "label": "create_tag",
+        "kind": 2,
+        "importPath": "src.routes.tags",
+        "description": "src.routes.tags",
+        "peekOfCode": "def create_tag():\n    \"\"\"Créer un nouveau tag\"\"\"\n    data = request.get_json(force=True)\n    name = data.get(\"name\")\n    color = data.get(\"color\")\n    if not name or not color:\n        return jsonify({\"error\": \"Le nom et la couleur sont obligatoires\"}), 400\n    # Vérifier si le tag existe déjà\n    existing = CONNECTION.execute(\"SELECT * FROM tags WHERE name = ?\", [name]).fetchone()\n    if existing:",
+        "detail": "src.routes.tags",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_tags",
+        "kind": 2,
+        "importPath": "src.routes.tags",
+        "description": "src.routes.tags",
+        "peekOfCode": "def get_all_tags():\n    \"\"\"Récupérer tous les tags\"\"\"\n    tags = CONNECTION.execute(\"SELECT * FROM tags\").fetchall()\n    tag_list = [{\"id\": row[0], \"name\": row[1], \"color\": row[2]} for row in tags]\n    return jsonify(tag_list), 200\n@tags_bp.route(\"/tags/<string:tag_id>\", methods=[\"GET\"])\n@jwt_required()\ndef get_tag(tag_id):\n    \"\"\"Récupérer un tag par son ID\"\"\"\n    tag = CONNECTION.execute(\"SELECT * FROM tags WHERE id = ?\", [tag_id]).fetchone()",
+        "detail": "src.routes.tags",
+        "documentation": {}
+    },
+    {
+        "label": "get_tag",
+        "kind": 2,
+        "importPath": "src.routes.tags",
+        "description": "src.routes.tags",
+        "peekOfCode": "def get_tag(tag_id):\n    \"\"\"Récupérer un tag par son ID\"\"\"\n    tag = CONNECTION.execute(\"SELECT * FROM tags WHERE id = ?\", [tag_id]).fetchone()\n    if not tag:\n        return jsonify({\"error\": \"Tag non trouvé\"}), 404\n    return jsonify({\"id\": tag[0], \"name\": tag[1], \"color\": tag[2]}), 200\n@tags_bp.route(\"/tags/<string:tag_id>\", methods=[\"PUT\"])\n@jwt_required()\ndef update_tag(tag_id):\n    \"\"\"Mettre à jour un tag par son ID\"\"\"",
+        "detail": "src.routes.tags",
+        "documentation": {}
+    },
+    {
+        "label": "update_tag",
+        "kind": 2,
+        "importPath": "src.routes.tags",
+        "description": "src.routes.tags",
+        "peekOfCode": "def update_tag(tag_id):\n    \"\"\"Mettre à jour un tag par son ID\"\"\"\n    data = request.get_json(force=True)\n    new_name = data.get(\"name\")\n    new_color = data.get(\"color\")\n    if not new_name and not new_color:\n        return jsonify({\"error\": \"Au moins un champ (nom ou couleur) doit être fourni\"}), 400\n    existing = CONNECTION.execute(\"SELECT * FROM tags WHERE id = ?\", [tag_id]).fetchone()\n    if not existing:\n        return jsonify({\"error\": \"Tag non trouvé\"}), 404",
+        "detail": "src.routes.tags",
+        "documentation": {}
+    },
+    {
+        "label": "delete_tag",
+        "kind": 2,
+        "importPath": "src.routes.tags",
+        "description": "src.routes.tags",
+        "peekOfCode": "def delete_tag(tag_id):\n    \"\"\"Supprimer un tag par son ID\"\"\"\n    existing = CONNECTION.execute(\"SELECT * FROM tags WHERE id = ?\", [tag_id]).fetchone()\n    if not existing:\n        return jsonify({\"error\": \"Tag non trouvé\"}), 404\n    CONNECTION.execute(\"DELETE FROM tags WHERE id = ?\", [tag_id])\n    return jsonify({\"message\": \"Tag supprimé avec succès\"}), 200",
+        "detail": "src.routes.tags",
+        "documentation": {}
+    },
+    {
+        "label": "tags_bp",
+        "kind": 5,
+        "importPath": "src.routes.tags",
+        "description": "src.routes.tags",
+        "peekOfCode": "tags_bp = Blueprint(\"tags\", __name__)\n@tags_bp.route(\"/tags\", methods=[\"POST\"])\n@jwt_required()\ndef create_tag():\n    \"\"\"Créer un nouveau tag\"\"\"\n    data = request.get_json(force=True)\n    name = data.get(\"name\")\n    color = data.get(\"color\")\n    if not name or not color:\n        return jsonify({\"error\": \"Le nom et la couleur sont obligatoires\"}), 400",
+        "detail": "src.routes.tags",
+        "documentation": {}
+    },
+    {
+        "label": "connect_to_duckdb",
+        "kind": 2,
+        "importPath": "src.duckdb_connection",
+        "description": "src.duckdb_connection",
+        "peekOfCode": "def connect_to_duckdb():\n    \"\"\"\n    Connecte à la base de données DuckDB et retourne l'objet de connexion.\n    \"\"\"\n    try:\n        conn = duckdb.connect(database=DB_FILE, read_only=False)\n        print(\"Connexion réussie à DuckDB !\")\n        return conn\n    except Exception as e:\n        print(\"Erreur lors de la connexion à DuckDB :\", e)",
+        "detail": "src.duckdb_connection",
+        "documentation": {}
+    },
+    {
+        "label": "get_or_create_table",
+        "kind": 2,
+        "importPath": "src.duckdb_connection",
+        "description": "src.duckdb_connection",
+        "peekOfCode": "def get_or_create_table(conn, table_name):\n    \"\"\"\n    Vérifie si une table existe dans DuckDB. La crée si elle n'existe pas.\n    :param conn: Instance de connexion DuckDB.\n    :param table_name: Nom de la table.\n    :return: Booléen (True si la table existe ou a été créée, False en cas d'erreur).\n    \"\"\"\n    try:\n        # Création d'une table générique si elle n'existe pas\n        create_table_query = f\"\"\"",
+        "detail": "src.duckdb_connection",
+        "documentation": {}
+    },
+    {
+        "label": "DB_FILE",
+        "kind": 5,
+        "importPath": "src.duckdb_connection",
+        "description": "src.duckdb_connection",
+        "peekOfCode": "DB_FILE = \"database.duckdb\"\ndef connect_to_duckdb():\n    \"\"\"\n    Connecte à la base de données DuckDB et retourne l'objet de connexion.\n    \"\"\"\n    try:\n        conn = duckdb.connect(database=DB_FILE, read_only=False)\n        print(\"Connexion réussie à DuckDB !\")\n        return conn\n    except Exception as e:",
+        "detail": "src.duckdb_connection",
+        "documentation": {}
+    },
+    {
+        "label": "create_tables",
+        "kind": 2,
+        "importPath": "src.init_db",
+        "description": "src.init_db",
+        "peekOfCode": "def create_tables(conn):\n    \"\"\"\n    Vérifie et crée les tables si elles n'existent pas dans la base de données.\n    \"\"\"\n    # DuckDB ne supporte pas AUTOINCREMENT, on utilise plutôt une SEQUENCE pour générer les IDs\n    conn.execute(\"CREATE SEQUENCE IF NOT EXISTS users_seq\")\n    conn.execute(\"CREATE SEQUENCE IF NOT EXISTS links_seq\")\n    conn.execute(\"CREATE SEQUENCE IF NOT EXISTS tags_seq\")\n    tables = {\n        \"users\": \"\"\"",
+        "detail": "src.init_db",
+        "documentation": {}
+    },
+    {
+        "label": "CONNECTION",
+        "kind": 5,
+        "importPath": "src.init_db",
+        "description": "src.init_db",
+        "peekOfCode": "CONNECTION = connect_to_duckdb()\nif CONNECTION:\n    create_tables(CONNECTION)\n    print(\"🚀 Base de données DuckDB initialisée avec succès.\")",
+        "detail": "src.init_db",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app = Flask(__name__)\n# Configuration de la clé secrète pour JWT\napp.config[\"JWT_SECRET_KEY\"] = \"votre_cle_secrete_pour_jwt\"  # Changez cette clé pour quelque chose de sécurisé\njwt = JWTManager(app)\n# Enregistrer le Blueprint\napp.register_blueprint(users_bp)\napp.register_blueprint(tags_bp)\napp.register_blueprint(links_bp)\nif __name__ == '__main__':\n    # Par défaut, Flask écoute sur le port 5000",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app.config[\"JWT_SECRET_KEY\"]",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app.config[\"JWT_SECRET_KEY\"] = \"votre_cle_secrete_pour_jwt\"  # Changez cette clé pour quelque chose de sécurisé\njwt = JWTManager(app)\n# Enregistrer le Blueprint\napp.register_blueprint(users_bp)\napp.register_blueprint(tags_bp)\napp.register_blueprint(links_bp)\nif __name__ == '__main__':\n    # Par défaut, Flask écoute sur le port 5000\n    app.run(host='0.0.0.0', port=5000, debug=True)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "jwt",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "jwt = JWTManager(app)\n# Enregistrer le Blueprint\napp.register_blueprint(users_bp)\napp.register_blueprint(tags_bp)\napp.register_blueprint(links_bp)\nif __name__ == '__main__':\n    # Par défaut, Flask écoute sur le port 5000\n    app.run(host='0.0.0.0', port=5000, debug=True)",
+        "detail": "app",
+        "documentation": {}
+    }
+]
