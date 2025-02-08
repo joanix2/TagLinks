@@ -89,7 +89,7 @@ Requête pour créer un nouvel utilisateur.
 #### Commande `curl`
 
 ```bash
-curl -X POST http://localhost:5000/signup \
+curl -X POST http://127.0.0.1:5000/signup \
 -H "Content-Type: application/json" \
 -d '{
     "username": "user1",
@@ -106,7 +106,7 @@ Requête pour s'authentifier et obtenir un token JWT.
 #### Commande `curl`
 
 ```bash
-curl -X POST http://localhost:5000/login \
+curl -X POST http://127.0.0.1:5000/login \
 -H "Content-Type: application/json" \
 -d '{
     "username": "user1",
@@ -123,7 +123,7 @@ Requête pour tester la connexion à MongoDB.
 #### Commande `curl`
 
 ```bash
-curl -X GET http://localhost:5000/check-mongo
+curl -X GET http://127.0.0.1:5000/check-duckdb
 ```
 
 ---
@@ -131,7 +131,7 @@ curl -X GET http://localhost:5000/check-mongo
 #### Créer un Tag
 
 ```bash
-curl -X POST http://localhost:5000/tags \
+curl -X POST http://127.0.0.1:5000/tags \
     -H "Authorization: Bearer <TOKEN>" \
     -H "Content-Type: application/json" \
     -d '{"name": "Important", "color": "#FF0000"}'
@@ -140,21 +140,21 @@ curl -X POST http://localhost:5000/tags \
 #### Lister Tous les Tags
 
 ```bash
-curl -X GET http://localhost:5000/tags \
+curl -X GET http://127.0.0.1:5000/tags \
     -H "Authorization: Bearer <TOKEN>"
 ```
 
 #### Obtenir un Tag par ID
 
 ```bash
-curl -X GET http://localhost:5000/tags/<TAG_ID> \
+curl -X GET http://127.0.0.1:5000/tags/<TAG_ID> \
     -H "Authorization: Bearer <TOKEN>"
 ```
 
 #### Mettre à Jour un Tag
 
 ```bash
-curl -X PUT http://localhost:5000/tags/<TAG_ID> \
+curl -X PUT http://127.0.0.1:5000/tags/<TAG_ID> \
     -H "Authorization: Bearer <TOKEN>" \
     -H "Content-Type: application/json" \
     -d '{"color": "#00FF00"}'
@@ -163,14 +163,14 @@ curl -X PUT http://localhost:5000/tags/<TAG_ID> \
 #### Supprimer un Tag
 
 ```bash
-curl -X DELETE http://localhost:5000/tags/<TAG_ID> \
+curl -X DELETE http://127.0.0.1:5000/tags/<TAG_ID> \
     -H "Authorization: Bearer <TOKEN>"
 ```
 
 - **Créer un link** :
 
   ```bash
-  curl -X POST http://localhost:5000/links \
+  curl -X POST http://127.0.0.1:5000/links \
     -H "Authorization: Bearer <TOKEN>" \
     -H "Content-Type: application/json" \
     -d '{
@@ -184,21 +184,21 @@ curl -X DELETE http://localhost:5000/tags/<TAG_ID> \
 - **Lister les links** :
 
   ```bash
-  curl -X GET http://localhost:5000/links \
+  curl -X GET http://127.0.0.1:5000/links \
     -H "Authorization: Bearer <TOKEN>"
   ```
 
 - **Obtenir un link spécifique** :
 
   ```bash
-  curl -X GET http://localhost:5000/links/<LINK_ID> \
+  curl -X GET http://127.0.0.1:5000/links/<LINK_ID> \
     -H "Authorization: Bearer <TOKEN>"
   ```
 
 - **Mettre à jour un link** :
 
   ```bash
-  curl -X PUT http://localhost:5000/links/<LINK_ID> \
+  curl -X PUT http://127.0.0.1:5000/links/<LINK_ID> \
     -H "Authorization: Bearer <TOKEN>" \
     -H "Content-Type: application/json" \
     -d '{"description": "Nouvelle description", "tag_ids": ["<NEW_TAG_ID_1>"]}'
@@ -207,14 +207,14 @@ curl -X DELETE http://localhost:5000/tags/<TAG_ID> \
 - **Supprimer un link** :
 
   ```bash
-  curl -X DELETE http://localhost:5000/links/<LINK_ID> \
+  curl -X DELETE http://127.0.0.1:5000/links/<LINK_ID> \
     -H "Authorization: Bearer <TOKEN>"
   ```
 
 - **Recherche de liens avec une limite**
 
   ```bash
-  curl -X POST http://localhost:5000/links/search-by-tags \
+  curl -X POST http://127.0.0.1:5000/links/search-by-tags \
       -H "Authorization: Bearer <TOKEN>" \
       -H "Content-Type: application/json" \
       -d '{

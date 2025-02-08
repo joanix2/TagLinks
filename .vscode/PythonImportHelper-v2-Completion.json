@@ -160,21 +160,21 @@
         "documentation": {}
     },
     {
-        "label": "duckdb",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "duckdb",
-        "description": "duckdb",
-        "detail": "duckdb",
-        "documentation": {}
-    },
-    {
         "label": "uuid",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "uuid",
         "description": "uuid",
         "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "duckdb",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "duckdb",
+        "description": "duckdb",
+        "detail": "duckdb",
         "documentation": {}
     },
     {
@@ -260,6 +260,15 @@
         "importPath": "src.routes.links",
         "description": "src.routes.links",
         "peekOfCode": "def delete_link(link_id):\n    \"\"\"\n    Endpoint pour supprimer un link par son ID.\n    \"\"\"\n    user_id = get_jwt_identity()\n    existing_link = CONNECTION.execute(\n        \"SELECT id FROM links WHERE id = ? AND user_id = ?\", [link_id, user_id]\n    ).fetchone()\n    if not existing_link:\n        return jsonify({\"error\": \"Link non trouvé\"}), 404",
+        "detail": "src.routes.links",
+        "documentation": {}
+    },
+    {
+        "label": "search_links_by_tags",
+        "kind": 2,
+        "importPath": "src.routes.links",
+        "description": "src.routes.links",
+        "peekOfCode": "def search_links_by_tags():\n    \"\"\"\n    Endpoint pour rechercher des liens par tags.\n    Nécessite un token JWT valide.\n    \"\"\"\n    data = request.get_json(force=True)\n    tag_ids = data.get(\"tag_ids\", [])\n    limit = data.get(\"limit\", None)  # Limite optionnelle du nombre de liens à inclure\n    if not tag_ids:\n        return jsonify({\"error\": \"Une liste de tag_ids est requise\"}), 400",
         "detail": "src.routes.links",
         "documentation": {}
     },
@@ -421,7 +430,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "app.config[\"JWT_SECRET_KEY\"] = \"votre_cle_secrete_pour_jwt\"  # Changez cette clé pour quelque chose de sécurisé\njwt = JWTManager(app)\n# Enregistrer le Blueprint\napp.register_blueprint(users_bp)\napp.register_blueprint(tags_bp)\napp.register_blueprint(links_bp)\nif __name__ == '__main__':\n    # Par défaut, Flask écoute sur le port 5000\n    app.run(host='0.0.0.0', port=5000, debug=True)",
+        "peekOfCode": "app.config[\"JWT_SECRET_KEY\"] = \"votre_cle_secrete_pour_jwt\"  # Changez cette clé pour quelque chose de sécurisé\njwt = JWTManager(app)\n# Enregistrer le Blueprint\napp.register_blueprint(users_bp)\napp.register_blueprint(tags_bp)\napp.register_blueprint(links_bp)\nif __name__ == '__main__':\n    # Par défaut, Flask écoute sur le port 5000\n    app.run(host='0.0.0.0', port=5000, debug=False)",
         "detail": "app",
         "documentation": {}
     },
@@ -430,7 +439,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "jwt = JWTManager(app)\n# Enregistrer le Blueprint\napp.register_blueprint(users_bp)\napp.register_blueprint(tags_bp)\napp.register_blueprint(links_bp)\nif __name__ == '__main__':\n    # Par défaut, Flask écoute sur le port 5000\n    app.run(host='0.0.0.0', port=5000, debug=True)",
+        "peekOfCode": "jwt = JWTManager(app)\n# Enregistrer le Blueprint\napp.register_blueprint(users_bp)\napp.register_blueprint(tags_bp)\napp.register_blueprint(links_bp)\nif __name__ == '__main__':\n    # Par défaut, Flask écoute sur le port 5000\n    app.run(host='0.0.0.0', port=5000, debug=False)",
         "detail": "app",
         "documentation": {}
     }

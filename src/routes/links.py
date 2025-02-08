@@ -158,48 +158,55 @@ def delete_link(link_id):
     return jsonify({"message": "Link supprimé avec succès"}), 200
 
 
-# @links_bp.route('/links/search-by-tags', methods=['POST'])
-# @jwt_required()
-# def search_links_by_tags():
-#     """
-#     Endpoint pour rechercher des liens par tags.
-#     Nécessite un token JWT valide.
-#     """
-#     data = request.get_json(force=True)
-#     tag_ids = data.get("tag_ids", [])
-#     limit = data.get("limit", None)  # Limite optionnelle du nombre de liens à inclure
+@links_bp.route('/links/search-by-tags', methods=['POST'])
+@jwt_required()
+def search_links_by_tags():
+    """
+    Endpoint pour rechercher des liens par tags.
+    Nécessite un token JWT valide.
+    """
+    data = request.get_json(force=True)
+    tag_ids = data.get("tag_ids", [])
+    limit = data.get("limit", None)  # Limite optionnelle du nombre de liens à inclure
 
-#     if not tag_ids:
-#         return jsonify({"error": "Une liste de tag_ids est requise"}), 400
+    if not tag_ids:
+        return jsonify({"error": "Une liste de tag_ids est requise"}), 400
 
-#     # Convertir les tag_ids en ObjectId
-#     tag_ids = [ObjectId(tag_id) for tag_id in tag_ids]
+    user_id = get_jwt_identity()  # Identifiant de l'utilisateur authentifié
 
-#     user_id = get_jwt_identity()  # Utilise l'utilisateur authentifié
+    # Construire la requête SQL pour trouver les liens correspondants aux tags fournis
+    query = f"""
+        SELECT l.id, l.name, l.description, l.url, 
+               GROUP_CONCAT(t.id) AS tag_ids,
+               COUNT(t.id) AS match_count
+        FROM links l
+        JOIN links_tags lt ON l.id = lt.link_id
+        JOIN tags t ON lt.tag_id = t.id
+        WHERE l.user_id = ?
+          AND t.id IN ({','.join(['?'] * len(tag_ids))})
+        GROUP BY l.id
+        ORDER BY match_count DESC
+    """
 
-#     # Trouver tous les liens de l'utilisateur
-#     links = list(links_collection.find({"user_id": user_id}))
+    params = [user_id] + tag_ids
+    if limit:
+        query += " LIMIT ?"
+        params.append(limit)
 
-#     # Table de hash pour regrouper les liens par score
-#     hash_table = {}
+    # Exécuter la requête et récupérer les résultats
+    results = CONNECTION.execute(query, params).fetchall()
 
-#     for link in links:
-#         # Calculer le nombre de tags en commun avec la liste fournie
-#         matching_tags_count = len(set(link["tag_ids"]) & set(tag_ids))
+    # Formater les résultats
+    links = []
+    for row in results:
+        links.append({
+            "id": row[0],
+            "name": row[1],
+            "description": row[2],
+            "url": row[3],
+            "tag_ids": row[4].split(",") if row[4] else [],
+            "match_count": row[5]
+        })
 
-#         if matching_tags_count > 0:  # Ignorer les liens avec un score de 0
-#             if matching_tags_count not in hash_table:
-#                 hash_table[matching_tags_count] = []
-#             hash_table[matching_tags_count].append(link)
-
-#     # Aplatir la table de hash en une liste triée par score (décroissant)
-#     sorted_links = []
-#     for score in sorted(hash_table.keys(), reverse=True):
-#         for link in hash_table[score]:
-#             # Convertir ObjectId en chaîne pour la réponse
-#             link["_id"] = str(link["_id"])
-#             link["tag_ids"] = [str(tag_id) for tag_id in link["tag_ids"]]
-#             sorted_links.append(link)
-
-#     return jsonify(sorted_links), 200
+    return jsonify(links), 200
 

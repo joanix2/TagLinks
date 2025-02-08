@@ -1,4 +1,3 @@
-import duckdb
 import uuid
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import jwt_required
@@ -22,10 +21,9 @@ def create_tag():
     if existing:
         return jsonify({"error": "Un tag avec ce nom existe déjà"}), 400
 
-    tag_id = str(uuid.uuid4())  # Générer un UUID
-    CONNECTION.execute("INSERT INTO tags (id, name, color) VALUES (?, ?, ?)", [tag_id, name, color])
+    CONNECTION.execute("INSERT INTO tags (name, color) VALUES (?, ?)", [name, color])
 
-    return jsonify({"message": "Tag créé avec succès", "tag": {"id": tag_id, "name": name, "color": color}}), 201
+    return jsonify({"message": "Tag créé avec succès", "tag": {"name": name, "color": color}}), 201
 
 
 @tags_bp.route("/tags", methods=["GET"])

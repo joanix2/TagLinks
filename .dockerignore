@@ -6,6 +6,3 @@ __pycache__/
 TODO.md
 venv
 env
-
-database.duckdb
-database.duckdb.wal
